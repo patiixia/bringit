@@ -18,7 +18,7 @@ const cors = require('cors');
 
 
 mongoose
-  .connect('mongodb://localhost/back', {useNewUrlParser: true})
+  .connect(`${process.env.BASE_URL}`, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -35,7 +35,7 @@ const auth   = require('./routes/auth');
 
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000'] //Tiene que ser el 5000 o 3000?
+  origin: ['http://localhost:3000']
 }));
 
 
@@ -93,6 +93,9 @@ app.use('/', index);
 
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
-      
+
+app.use((req, res, next) => {
+  res.sendFile(__dirname + "/public/index.html");
+ });
 
 module.exports = app;
