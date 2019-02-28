@@ -23,18 +23,18 @@ class Navbar extends Component {
       }
        
     render(){
-        if(this.state.loggedInUser){
+    if(this.state.loggedInUser){
           return(
             <nav className="nav-style">
-              <ul>
-                <li>Welcome, {this.state.loggedInUser.username}</li>
+               <ul>
+                 <li>Welcome, {this.state.loggedInUser.username}</li>
                 <li><Link to='/projects' style={{ textDecoration: 'none' }}>Projects</Link></li>
-                <li>
-                <Link to='/'>
-                <button onClick={() => this.logoutUser()}>Logout</button>
-              </Link>                
-              </li>
-              </ul>
+                 <li>
+                 <Link to='/'>
+               <button onClick={() => this.logoutUser()}>Logout</button>
+               </Link>                
+               </li>
+               </ul>
             </nav>
           )
         } else {
@@ -49,6 +49,6 @@ class Navbar extends Component {
           )
         }
         }
-}
+      }
 
 export default Navbar;
