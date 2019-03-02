@@ -6,10 +6,7 @@ const travelSchema = new Schema({
   userId: String,
   travelFrom: String,
   travelTo: String,
-  travelDate: { 
-    type: Date,
-    default: Date.now
-  }
+  travelDate: String
 });
 
 const Travel = mongoose.model('Travel', travelSchema);
