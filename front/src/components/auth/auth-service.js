@@ -9,8 +9,8 @@ class AuthService {
     this.service = service;
   }
 
-  signup = (email, password) => {
-    return this.service.post('/signup', {email, password})
+  signup = (email, password, name, lastName) => {
+    return this.service.post('/signup', {email, password, name, lastName})
     .then(response => response.data)
   }
 
@@ -28,6 +28,13 @@ class AuthService {
     return this.service.post('/logout', {})
     .then(response => response.data)
   }
+
+// Esto renderiza los datos del usuario?
+  profile = () => {
+    return this.service.get('/profile', {})
+    .then(response => response.data)
+  }
+
   
 }
 

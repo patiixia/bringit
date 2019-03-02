@@ -5,8 +5,10 @@ import AuthService from './components/auth/auth-service';
 
 
 import Signup from './components/Signup/Signup';
-import Navbar from './components/Navbar/Navbar';
 import Login from './components/Login/Login';
+import Home from './components/Home/Home';
+import Profile from './components/Profile/Profile';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -14,57 +16,53 @@ class App extends Component {
   
   constructor(props){
     super(props)
-    this.state = { loggedInUser: null };
-    this.service = new AuthService();
+    this.state = { loggedInUser: null, user: null };
+    // this.service = new AuthService();
   }
 
-  fetchUser(){
-    if( this.state.loggedInUser === null ){
-      this.service.loggedin()
-      .then(response =>{
-        this.setState({
-          loggedInUser:  response
-        }) 
-      })
-      .catch( err =>{
-        this.setState({
-          loggedInUser:  false
-        }) 
-      })
-    }
-  }
-
-  getTheUser= (userObj) => {
-    this.setState({
-      loggedInUser: userObj
-    })
+  changeUser = (newUser) => {
+    this.setState({...this.state, user: newUser})
   }
 
 
   render() {
-    this.fetchUser()
-    if(this.state.loggedInUser){
-      return (
-        <div className="App">
-          <Navbar userInSession={this.state.loggedInUser} />
-          <Switch>
-  
-          </Switch>
-        </div>
-      );
-    } else {
-      
+
     return (
       <div className="App">
-      <Navbar userInSession={this.state.loggedInUser} />
-
+      
         <Switch>
-        <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
-        <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/login' render={() => <Login getUser={this.changeUser}/>}/>
+        <Route exact path='/signup' render={() => <Signup getUser={this.changeUser}/>}/>
+        <Route exact path='/profile' render={() => <Profile getUser={this.changeUser}/>}/>
+        {/* <Route exact path='/footer' render={() => <Footer getUser={this.changeUser}/>}/> */}
         </Switch>
-      </div>
-    );
-  }
+      </div>  
+    )
+
+    //this.fetchUser()
+  //   if(this.state.loggedInUser){
+  //     return (
+  //       <div className="App">
+  //         <Navbar userInSession={this.state.loggedInUser} />
+  //         <Switch>
+  
+  //         </Switch>
+  //       </div>
+  //     );
+  //   } else {
+      
+  //   return (
+  //     <div className="App">
+  //     <Navbar userInSession={this.state.loggedInUser} />
+
+  //       <Switch>
+  //       <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
+  //       <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
+  //       </Switch>
+  //     </div>
+  //   );
+  // }
 }
 }
 export default App;

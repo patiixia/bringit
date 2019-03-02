@@ -35,7 +35,7 @@ const app = express();
 
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000']
+  origin: ['http://localhost:3000', 'https://app-bringit.herokuapp.com']
 }));
 
 
@@ -85,7 +85,10 @@ app.use(session({
 }))
 app.use(flash());
 require('./passport')(app);
-    
+
+app.use((req, res, next) => {
+  res.sendFile(__dirname + "/public/index.html");
+ });
 
 const index = require('./routes/index');
 app.use('/', index);
@@ -93,8 +96,9 @@ app.use('/', index);
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
-app.use((req, res, next) => {
-  res.sendFile(__dirname + "/public/index.html");
- });
+const travelRoutes = require('./routes/travel');
+app.use('/api/travel', travelRoutes);
+
+
 
 module.exports = app;

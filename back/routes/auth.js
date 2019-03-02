@@ -8,7 +8,6 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
-
 // REVISADO con la learning, funciona. Guarda datos en Mongodb
 router.post("/signup", (req, res, next) => {
   const email = req.body.email;
@@ -34,6 +33,7 @@ router.post("/signup", (req, res, next) => {
     }
 
     if (foundUser) {
+      console.log("3")
         res.status(400).json({ message: 'Email taken. Please, log in.' });
         return;
     }
@@ -61,7 +61,7 @@ router.post("/signup", (req, res, next) => {
             res.status(500).json({ message: 'Login after signup went bad.' });
             return;
         }
-
+    console.log(newUser)    
     res.status(200).json(newUser);
       });
     });

@@ -1,0 +1,29 @@
+.footer-style {
+    overflow: hidden;
+    //background-color: grey;
+    // position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  // .footer-style Link {
+  //   //float: right;
+  //   //display: block;
+  //   color: #f2f2f2;
+  //   text-align: center;
+  //   padding: 14px 16px;
+  //   text-decoration: none;
+  //   font-size: 17px;
+  // }
+  
+  .footer-style > ul > li {
+    list-style: none;
+    display: inline;
+    margin: 2%;
+  }
+
+  .link {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+  }

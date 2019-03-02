@@ -1,2 +1,57 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+.nav-style {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(53, 53, 53);
+}
+
+.nav-style li {
+  float: right;
+  //display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+
+.mostrar {
+    display: block;
+
+  }
+
+  .ocultar {
+    display: none;
+
+  }
+
+  #profilephoto {
+    height: 30px;
+    width: 30px;
+  }
+
+  #messages {
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+  }
+
+  #logo-bringit {
+    display: block;
+    height: 50px;
+    width: 100px;
+  }

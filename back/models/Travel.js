@@ -4,7 +4,6 @@ const Schema   = mongoose.Schema;
 const travelSchema = new Schema({
   // travelTo y travelFrom hay que meterlos como si fuese un mismo key?
   userId: String,
-  travelId: String,
   travelFrom: String,
   travelTo: String,
   travelDate: { 
