@@ -13,6 +13,11 @@ class TravelService {
     return this.service.get('/travel')
     .then(response => response.data)
   }
+
+  sendTravels = (travel) => {
+    return this.service.post('/travel', travel)
+    .then(response => response.data)
+  }
   
 }
 

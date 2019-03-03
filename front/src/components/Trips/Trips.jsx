@@ -3,7 +3,11 @@ import TravelService from '../service/travel-service';
 
 import { Link } from 'react-router-dom';
 
+import "./trips.scss";
+
+
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 
 export default class Trips extends Component {
@@ -19,7 +23,6 @@ export default class Trips extends Component {
     .then(travel => {
       this.setState({...this.state,
         travels: travel
-
       })
     }).catch(err => {
       console.log(err)
@@ -29,20 +32,36 @@ export default class Trips extends Component {
   render() {
     return (
       <div>
-        <Link to={"/trips/new"}> New Trip</Link>
+        <Navbar conditions={'trips'}/>
+
+        <div className="myTrips-header">
+        <h2>Deliveries</h2>
+        <Link id="myTrips-button" to={"/trips/new"}> New Trip</Link>
         
-        <div>
+        </div>
+
+
+        <div className="myTrips">
+
+        <div className="trips-container">
 
           {this.state.travels.map(travel => {
             return(
-              <div>
-              <h2>Travel From: {travel.travelFrom}</h2>
-              <h2>Travel To: {travel.travelTo}</h2>
+              <div className="allMyTrips">
+              <h2>{travel.travelFrom}</h2>
+              <h2>{travel.travelTo}</h2>
+              <p>{travel.travelDate}</p>
+              <input id="tripDelete-button" type="submit" value="Cancel Trip" />
               </div>
+
+
             )
           } )
         }
         </div>
+        </div>
+
+        
 
       </div>
     )

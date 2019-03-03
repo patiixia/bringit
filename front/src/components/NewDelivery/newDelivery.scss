@@ -1,0 +1,50 @@
+.newDelivery-form {
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.order-input {
+    color: rgb(53, 53, 53);
+    background-color:#e8eeef;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    border: none;
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 1.8em;
+    //width: 265px;
+    font-size:13px;
+
+}
+
+#order-button {
+    font-weight: 600;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    background-color:  rgb(80, 249, 196);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  }
+
+
+#journey {
+   height: 100px;
+   width: 120px;
+
+}
+
+#addnewtrip-text {
+    font-size: 15px;
+    color: #8f8f95;
+}
+

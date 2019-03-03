@@ -3,7 +3,6 @@ const Schema   = mongoose.Schema;
 
 const orderSchema = new Schema({
   userId: String,
-  orderId: String,
   productLink: String,
   productImage: String,
   productName: String,
@@ -12,10 +11,7 @@ const orderSchema = new Schema({
   amount: Number,
   deliveryFrom: String,
   deliveryTo: String,
-  orderDate: { 
-    type: Date,
-    default: Date.now
-  }
+  orderDate: String
 });
 
 const Order = mongoose.model('Order', orderSchema);
