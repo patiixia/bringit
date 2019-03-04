@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TravelService from '../service/travel-service';
 
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import "./trips.scss";
 
@@ -13,7 +13,7 @@ export default class Trips extends Component {
    
   constructor(props){
     super(props);
-    this.state = { travels: [], loggedIn: false};
+    this.state = { travels: []};
     this.service = new TravelService();
   }
 
@@ -21,8 +21,7 @@ export default class Trips extends Component {
     this.service.getTravels()
     .then(travel => {
       this.setState({...this.state,
-        travels: travel,
-        loggedIn: true
+        travels: travel
       })
       this.props.getUser(travel)
     }).catch(err => {
@@ -31,7 +30,7 @@ export default class Trips extends Component {
   }
 
   render() {
-    return  !this.state.loggedIn ? (
+    return (
       <div>
         <Navbar conditions={'trips'}/>
 
@@ -65,6 +64,6 @@ export default class Trips extends Component {
         
 
       </div>
-    ): <Redirect to="/login" />
+    )
   }
 }

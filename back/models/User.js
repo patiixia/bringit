@@ -6,7 +6,7 @@ const userSchema = new Schema({
   password: String,
   name: String,
   lastName: String,
-  profilePhoto: String,
+  imageUrl: {type:String, default: 'https://image.flaticon.com/icons/svg/150/150808.svg'},
   bio: String
 }, {
   timestamps: {

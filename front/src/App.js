@@ -11,6 +11,7 @@ import Trips from './components/Trips/Trips';
 import NewDelivery from './components/NewDelivery/NewDelivery';
 import Orders from './components/Orders/Orders';
 import MainOrderForm from './components/NewOrder/MainOrderForm'
+import Editprofile from './components/Profile/Editprofile';
 
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
         <Route exact path='/login' render={() => <Login getUser={this.changeUser}/>}/>
         <Route exact path='/signup' render={() => <Signup getUser={this.changeUser}/>}/>
         <Route exact path='/profile' render={() => <Profile getUser={this.changeUser}/>}/>
+        <Route exact path='/profile' render={() => <Editprofile getUser={this.changeUser}/>}/>
         <Route exact path='/travels' render={() => <Trips/> }/>
         <Route exact path='/trips/new' render={() => <NewDelivery/> }/>
         <Route exact path='/orders' render={() => <Orders/> }/>

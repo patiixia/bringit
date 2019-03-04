@@ -5,7 +5,7 @@ const travelSchema = new Schema({
   userId: String,
   travelFrom: String,
   travelTo: String,
-  deliveryDate: String
+  travelDate: String
 });
 
 const Travel = mongoose.model('Travel', travelSchema);

@@ -16,8 +16,8 @@ export default class Home extends Component {
           <div id="image" className="col col-image">
         </div>
 
-        <div class="col col-text">
-          <div class="Aligner-item">
+        <div className="col col-text">
+          <div className="Aligner-item">
             <h1>bringit</h1>
             <p>bring.it connects shoppers and travelers who help each other access the world.</p>
           </div>

@@ -7,6 +7,7 @@ import "./profile.scss";
 //Rutas a paginas
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
+import Editprofile from './Editprofile';
 
 export default class Profile extends Component {
 
@@ -32,7 +33,7 @@ export default class Profile extends Component {
     return (
       <div>
         <Navbar conditions={'profile'}/>
-
+        <Editprofile conditions={'editprofile'}/>
         <div className="profile-style">
         <h1>Hi there,</h1>
         <img src="" alt=""/>

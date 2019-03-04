@@ -4,10 +4,7 @@ import { Redirect } from 'react-router-dom';
 
 import "./newDelivery.scss";
 
-
 import Navbar from '../Navbar/Navbar';
-
-
 
 export default class NewDelivery extends Component {
 
@@ -26,7 +23,7 @@ export default class NewDelivery extends Component {
             travelFrom: "", 
             travelTo: "",
             travelDate: "",
-            hasBeenSent: true
+            hasBeenSent: true,
           })
         })
         .catch( error => console.log("error") )
@@ -35,8 +32,9 @@ export default class NewDelivery extends Component {
       handleChange = (event) => {  
         const {name, value} = event.target;
         this.setState({[name]: value});
-      }
 
+      }
+// redirección a login si no estás logueado, cómo lo aplico?
   render() {
     if (this.state.hasBeenSent === false){
         return (
