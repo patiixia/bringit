@@ -32,10 +32,13 @@ export default class Profile extends Component {
     return (
       <div>
         <Navbar conditions={'profile'}/>
+
         <div className="profile-style">
-        <h1>Hi there, </h1>
+        <h1>Hi there,</h1>
         <img src="" alt=""/>
         <input id="edit-profile-button" type="submit" value="Edit profile" />
+
+
         {/* <h1>Hi there, {this.state.loggedInUser.name}</h1> */}
         </div>
         <Footer />

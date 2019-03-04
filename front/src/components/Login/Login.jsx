@@ -4,7 +4,6 @@ import { Link, Redirect } from 'react-router-dom';
 
 import "./login.scss";
 
-
 //Rutas a páginas
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -42,7 +41,6 @@ class Login extends Component {
       
     render(){
       return !this.state.loggedIn ? (
-
 
         <div>
           
