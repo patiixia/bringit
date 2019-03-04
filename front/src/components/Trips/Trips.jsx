@@ -7,7 +7,6 @@ import "./trips.scss";
 
 
 import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
 
 
 export default class Trips extends Component {
@@ -50,7 +49,7 @@ export default class Trips extends Component {
               <div className="allMyTrips">
               <h2>{travel.travelFrom}</h2>
               <h2>{travel.travelTo}</h2>
-              <p>{travel.travelDate}</p>
+              <p id="travel-date">{travel.travelDate}</p>
               <input id="tripDelete-button" type="submit" value="Cancel Trip" />
               </div>
 

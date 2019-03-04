@@ -46,7 +46,7 @@ class Signup extends Component {
     <div>
 
       <Navbar conditions={'signup'}/>
-      <hr/>
+      
       <div className="signup-form">
 
       <form id="signupform" onSubmit={this.handleFormSubmit}>
@@ -74,7 +74,7 @@ class Signup extends Component {
       </form>
 
       </div>
-      <hr/>
+      
       <Footer />
 
 

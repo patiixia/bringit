@@ -69,7 +69,6 @@ class Login extends Component {
           </p>
           </form>
           </div>
-          <hr/>
           <Footer />
         </div>
       ): <Redirect to="/profile" />

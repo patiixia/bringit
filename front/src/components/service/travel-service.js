@@ -17,6 +17,10 @@ class TravelService {
   sendTravels = (travel) => {
     return this.service.post('/travel', travel)
     .then(response => response.data)
+    .catch( message => {
+      console.log("error en servicio")
+      console.log(message)
+    } )
   }
   
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TravelService from '../service/travel-service';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import "./newDelivery.scss";
 
@@ -27,9 +27,9 @@ export default class NewDelivery extends Component {
             travelTo: "",
             travelDate: "",
             hasBeenSent: true
-          });
+          })
         })
-        .catch( error => console.log(error) )
+        .catch( error => console.log("error") )
     }
 
       handleChange = (event) => {  

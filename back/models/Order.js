@@ -8,10 +8,11 @@ const orderSchema = new Schema({
   productName: String,
   productDetails: String,
   price: Number,
+  quantity: Number,
   amount: Number,
   deliveryFrom: String,
   deliveryTo: String,
-  orderDate: String
+  deliveryDate: String
 });
 
 const Order = mongoose.model('Order', orderSchema);

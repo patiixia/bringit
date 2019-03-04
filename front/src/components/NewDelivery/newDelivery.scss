@@ -14,7 +14,7 @@
     border-radius: 4px;
     padding: 1em;
     margin-bottom: 1.8em;
-    //width: 265px;
+    width: 500px;
     font-size:13px;
 
 }
@@ -46,5 +46,16 @@
 #addnewtrip-text {
     font-size: 15px;
     color: #8f8f95;
+}
+
+::-webkit-datetime-edit,
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field,
+::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator {
+font-family: "Muli"
 }
 

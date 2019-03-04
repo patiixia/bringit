@@ -97,7 +97,10 @@ app.use('/auth', authRoutes);
 const travelRoutes = require('./routes/travel');
 app.use('/api/travel', travelRoutes);
 
-
+// creación de pedidos
+const orderRoutes = require('./routes/order');
+app.use('/api/order', orderRoutes);
+//
 
 app.use((req, res, next) => {
   res.sendFile(__dirname + "/public/index.html");

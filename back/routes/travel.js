@@ -3,15 +3,21 @@ const router = express.Router();
 
 const Travel = require("../models/Travel");
 
-
 router.post('/', (req, res, next) => {
-  console.log(req)
   const travel = {
     userId: req.user._id,
     travelFrom: req.body.travelFrom,
     travelTo: req.body.travelTo,
     travelDate: req.body.travelDate
   }
+  
+  if (travel.travelFrom === "" || travel.travelTo === "" || travel.travelDate === "") {
+    
+    res.status("500").json({message: "Campos no completados"});
+    return;
+  }
+
+
   Travel.create(travel)
   .then(response => {
     res.status("200").json(response)
