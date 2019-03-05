@@ -1,5 +1,5 @@
 import axios from 'axios';
-console.log(process.env)
+
 class OrderService {
   constructor() {
     let service = axios.create({

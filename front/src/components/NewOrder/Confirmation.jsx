@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar/Navbar';
-// import { Button, List } from 'semantic-ui-react';
+
+import "./newOrder.scss";
+
 
 class Confirmation extends Component{
     saveAndContinue = (e) => {
@@ -20,26 +22,48 @@ class Confirmation extends Component{
             <div>
 
                 <Navbar conditions={'Order'}/>
-                <h1>Confirm your Details</h1>
-                <p>Click Confirm if the following details have been correctly entered</p>
+
+                <div className="order-form">
+
+                <div className="form-content">
+                
+                <img id="confirmation-img" src="https://image.flaticon.com/icons/svg/1004/1004765.svg" alt="confirmation"/>
+
+                <h2 id="order-header">Confirm your Details</h2>
+                <p id="confirmation-p">Click confirm if the following details have been correctly entered</p>
+                
+                <div className="details-confirmation">
+                
                 <ul>
-                        <li>Link: {productLink}</li>
-                        <li>Product Image: {productImage}</li>
-                        <li>Product Name: {productName}</li>
-                        <li>Product Details: {productDetails}</li>
-                        <li> Price: {price}</li>
-                        <li> Quantity: {quantity}</li>
-                        <li> Total: {price*quantity}</li>
-                        <li> Delivery From: {deliveryFrom}</li>
-                        <li> Delivery To: {deliveryTo}</li>
-                        <li> Order Date: {deliveryDate}</li>
-                        
+                        <li className="order-li">Product Link: {productLink}</li>
+                        <li className="order-li">Product Image: {productImage}</li>
+                        <li className="order-li">Product Name: {productName}</li>
+                        <li className="order-li">Product Details: {productDetails}</li>
+                <hr className="hr-confirmation"/>
+                        <li className="order-li"> Delivery From: {deliveryFrom}</li>
+                        <li className="order-li"> Delivery To: {deliveryTo}</li>
+                        <li className="order-li"> Order Date: {deliveryDate}</li>
+                </ul>
+
+                </div>
+
+                <div className="details-confirmation">
+                
+                <ul>
+                      
+                        <li className="order-li"> Price: {price}</li>
+                        <li className="order-li"> Quantity: {quantity}</li>
+                        <li className="order-li"> Total: {price*quantity}</li>
+    
 
                 </ul>
 
-                <input type="submit" value="Back" onClick={this.back} />
-                <input type="submit" value="Confirm" onClick={this.saveAndContinue} />
+                </div>
 
+                <input id="order-button" type="submit" value="Back" onClick={this.back} />
+                <input id="order-button" type="submit" value="Confirm" onClick={this.saveAndContinue} />
+                </div>
+                </div>
             </div>
         )
     }

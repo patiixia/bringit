@@ -7,7 +7,7 @@ import DeliveryCityDate from './DeliveryCityDate';
 import Confirmation from './Confirmation';
 import Success from './Success';
 
-class MainOrderForm extends Component {
+export default class MainOrderForm extends Component {
 
     constructor (props){
         super(props);
@@ -74,4 +74,3 @@ class MainOrderForm extends Component {
     }
 }
 
-export default MainOrderForm;

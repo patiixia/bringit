@@ -8,7 +8,7 @@
 }
 
 .nav-style li {
-  float: right;
+  left: 0;
   //display: block;
   color: #f2f2f2;
   align-items: center;
@@ -28,7 +28,12 @@ a:hover {
   text-underline-position: under;
 }
 
-.container {
+.container-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container-right {
   display: flex;
   justify-content: flex-end;
 }
@@ -51,17 +56,22 @@ a:hover {
   }
 
   #profilephoto {
+    margin-top: 7px;
     height: 30px;
     width: 30px;
   }
 
   #messages {
+    
+    margin-top: 7px;
     height: 30px;
     width: 30px;
     margin-right: 20px;
   }
 
   #logo-bringit {
+    margin-top: 10px;
+    margin-left: 10px;
     display: block;
     height: 50px;
     width: 150px;

@@ -1,0 +1,134 @@
+// Common blocs
+
+.order-form {
+    margin-top: 120px;
+    height:35em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+.order1-input {
+    color: rgb(53, 53, 53);
+    background-color:#e8eeef;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    border: none;
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 1.8em;
+    width: 265px;
+    font-size:13px;
+  }
+
+  #order-button {
+    font-weight: 600;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    background-color:  rgb(80, 249, 196);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  }
+
+#order-header {
+    color: rgb(53, 53, 53);
+}
+
+#totalprice {
+    text-align: right;
+    margin: 8px;
+    color: rgb(53, 53, 53);
+}
+
+.order-li {
+    list-style:none;
+    margin-bottom: 10px;
+}
+
+.details-confirmation {
+    background-color:  #e8eeef;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 10px;
+
+}
+
+.form-content-left {
+  background-color: #e8eeef;
+  margin-top: 117px;
+  margin-left: 50px;
+  width: 250px;
+  height: 120px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.hr-product {
+  border-top: 1.5px solid white;
+  color:#f3f6db;
+  margin-left: 10px; 
+  margin-right: 10px;
+}
+
+.hr-confirmation {
+  border-top: 1.5px solid white;
+  margin-right: 30px;
+  
+}
+
+#package {
+  height: 50px;
+  width: 50px;
+  margin-left: 115px;
+
+}
+
+#delivery {
+  height: 50px;
+  width: 50px;
+  margin-left: 115px;
+
+
+}
+
+#confirmation-img {
+  margin-top: 90px;
+  height: 50px;
+  width: 50px;
+  margin-left: 230px;
+
+
+}
+
+#confirmation-p{
+  font-size: 16px;
+
+}
+
+.step-one {
+  margin-top: 100px;
+  color: white;
+  background-color:  rgb(80, 249, 196);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  display: inline-block;
+
+  
+
+}

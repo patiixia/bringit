@@ -10,7 +10,11 @@ export default class NewDelivery extends Component {
 
     constructor(props){
         super(props);
-        this.state = { travelFrom: '', travelTo: '', travelDate: '', hasBeenSent: false};
+        this.state = { 
+          travelFrom: '', 
+          travelTo: '', 
+          travelDate: '', 
+          hasBeenSent: false};
         this.service = new TravelService();
       }
 

@@ -33,24 +33,7 @@ class AuthService {
   profile = () => {
     return this.service.get('/profile', {})
     .then(response => response.data)
-  }
-
-   handleUpload (theFile) {
-    // console.log('file in service: ', theFile)
-    return this.service.post('/upload', theFile)
-      .then(res => res.data)
-  }
-
-  updatePhotoProfile = photo => {
-    return this.loggedin().then(user => {
-      user.imageUrl = photo.imageUrl;
-      return this.service.post("/update", user)
-      .then(res => res.data)
-    })
-  }
-
- 
-  
+  }  
 }
 
 export default AuthService;
