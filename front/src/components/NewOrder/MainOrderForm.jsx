@@ -39,6 +39,8 @@ export default class MainOrderForm extends Component {
         })
     }
 
+    
+
     handleChange = input => event => {
         this.setState({ [input] : event.target.value })
     }
@@ -70,7 +72,11 @@ export default class MainOrderForm extends Component {
                     />
         case 4:
             return <Success />
+        default: 
+            return 1
         }
+        
+    
     }
 }
 

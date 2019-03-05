@@ -24,9 +24,24 @@ export default class Home extends Component {
         </div>
       </div>
 
-      {/* <div className="howdoesitwork">
-        <p id="howdoesitwork-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, ex porro quasi at iure commodi dicta maiores aperiam nobis! Suscipit perspiciatis aliquam voluptas a, culpa veniam sequi quas delectus.</p>
-      </div> */}
+      <div className="howdoesitwork">
+
+      <div className="home-col">
+        <img className="home-img" src="https://image.flaticon.com/icons/svg/751/751463.svg" alt="lupa"/>
+        <p className="howdoesitwork-p">Publish your order or trip</p>
+        </div> 
+
+        <div className="home-col">
+        <img className="home-img" src="https://image.flaticon.com/icons/svg/751/751463.svg" alt="lupa"/>
+        <p className="howdoesitwork-p">Connect with people all over the world</p>
+        </div> 
+
+        <div className="home-col">
+        <img className="home-img" src="https://image.flaticon.com/icons/svg/751/751463.svg" alt="lupa"/>
+        <p className="howdoesitwork-p">Receive the product you are looking for</p>
+        </div> 
+
+      </div>
 
         <Footer />
       </div>
