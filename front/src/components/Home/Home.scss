@@ -36,7 +36,7 @@
   }
   
 h1{
-    padding-top: 60px;
+    //padding-top: 60px;
     font-size: 70px;    
     color: rgb(60, 60, 60);
 }
@@ -49,9 +49,6 @@ p {
 }
 
 //how does it work
-
-
-
 
 .howdoesitwork {
   background-color: #e8eeef; 
@@ -79,4 +76,35 @@ p {
 .home-col {
   margin-top: 100px;
   flex: 33%;
+}
+
+
+// how dos it work white background
+
+#vertical-hr {
+  border:         none;
+  border-left:    1px solid hsla(195, 0%, 91%,100);
+  height:         100vh;
+  width:          0.4px; 
+  margin-top: 20px;
+}
+
+.grid-flex-howdoes {
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row; 
+}
+.col-howdoes {
+  flex: 1;
+}
+
+.col-text-howdoes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:41.5em;
+}
+.Aligner-item-howdoes {
+  width: 60%;
 }

@@ -55,7 +55,7 @@ class Navbar extends Component {
         return (
 
           
-
+<div>
         <nav className="nav-style">
 
         <div className="container-left">
@@ -66,13 +66,27 @@ class Navbar extends Component {
         <div className="container-right">
           <li className={this.props.conditions==="home" || this.props.conditions==="signup"  ? "mostrar": "ocultar" }><Link to='/login'>Log in</Link></li>
           <li className={this.props.conditions==="home" || this.props.conditions==="login" ? "mostrar": "ocultar" }><Link to='/signup'>Sign up</Link></li>
-          <Link to='/messages'><img id="messages" className={this.props.conditions==="profile" ? "mostrar": "ocultar" } src="https://image.flaticon.com/icons/svg/131/131155.svg" alt="messages"/></Link>
-          <Link to='/messages'><img id="profilephoto" className={this.props.conditions==="profile" ? "mostrar": "ocultar" } src="https://image.flaticon.com/icons/svg/149/149995.svg" alt="profile"/></Link>
-          <li className={this.props.conditions==="trips" ? "mostrar": "ocultar" }><Link to='/'>Log out</Link></li>
+          <Link to='/messages'><img id="messages" className={this.props.conditions==="home" ? "ocultar": "mostrar" } src="https://image.flaticon.com/icons/svg/131/131155.svg" alt="messages"/></Link>
+          
+          
+          <Link to='/'><img id="profilephoto" className={this.props.conditions==="home" ? "ocultar": "mostrar" } src="https://image.flaticon.com/icons/svg/149/149995.svg" alt="profile"/></Link>
+          {/* <li className={this.props.conditions==="trips" ? "mostrar": "ocultar" }><Link to='/'>Log out</Link></li> */}
 
-        </div>
+        </div>          
 
         </nav>
+
+<div className="profile-menu-container">
+<li className="p-menu"><Link to='/profile'>Profile</Link></li>
+<li className="p-menu"><Link to='/orders'>Orders</Link></li>
+<li className="p-menu"><Link to='/trips'>Trips</Link></li>
+<li className="p-menu"><Link to='/'>Log out</Link></li>
+
+
+
+</div>
+
+</div>   
 
 
         )

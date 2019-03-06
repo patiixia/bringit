@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import OrderService from '../service/order-service';
+import { Link, Redirect } from 'react-router-dom';
+
 
 
 import ProductDetails from './ProductDetails';
 import DeliveryCityDate from './DeliveryCityDate';
 import Confirmation from './Confirmation';
-import Success from './Success';
 
 export default class MainOrderForm extends Component {
 
@@ -39,13 +40,34 @@ export default class MainOrderForm extends Component {
         })
     }
 
-    
+    handleFormSubmit = (event) => {
+        event.preventDefault();
+       
+        this.service.sendOrders( this.state)
+        .then( order => {
+            this.setState({ step: 4,
+                productLink: '',
+                productImage: '',
+                productName: '',
+                productDetails: '',
+                price: '',
+                quantity: '',
+                amount: '',
+                deliveryFrom: '',
+                deliveryTo: '',
+                deliveryDate: ''})
+        })
+        .catch( error => console.log("error") )
+    }
+
 
     handleChange = input => event => {
         this.setState({ [input] : event.target.value })
     }
     
     render(){
+
+
         const {step} = this.state;
         const { productLink, productImage, productName, productDetails, price, quantity, amount, deliveryFrom, deliveryTo, deliveryDate } = this.state;
         const values = { productLink, productImage, productName, productDetails, price, quantity, amount, deliveryFrom, deliveryTo, deliveryDate };
@@ -68,12 +90,15 @@ export default class MainOrderForm extends Component {
             return <Confirmation 
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
+                    confirmation={this.handleFormSubmit}
                     values={values}
                     />
         case 4:
-            return <Success />
+        return <Redirect to="/orders" />
+
         default: 
             return 1
+
         }
         
     

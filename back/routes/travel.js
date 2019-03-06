@@ -17,7 +17,6 @@ router.post('/', (req, res, next) => {
     return;
   }
 
-
   Travel.create(travel)
   .then(response => {
     res.status("200").json(response)

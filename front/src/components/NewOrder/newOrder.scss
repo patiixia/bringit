@@ -1,7 +1,7 @@
 // Common blocs
 
 .order-form {
-    margin-top: 120px;
+    margin-top: 60px;
     height:35em;
     display: flex;
     flex-wrap: wrap;
@@ -34,6 +34,25 @@
     color: white;
     background-color:  rgb(80, 249, 196);
     width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  }
+
+
+
+  #order-button-delivery {
+    font-weight: 600;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    background-color:  rgb(80, 249, 196);
+    width: 30%;
     border: none;
     border-radius: 4px;
     padding: 0.8em;
@@ -119,8 +138,10 @@
 
 }
 
-.step-one {
-  margin-top: 100px;
+// Step 1
+
+.step-one p {
+  margin-top: 20px;
   color: white;
   background-color:  rgb(80, 249, 196);
   border-radius: 50%;
@@ -128,7 +149,27 @@
   width: 30px;
   padding: 5px;
   display: inline-block;
+}
 
-  
 
+.step-two p {
+  margin-top: 20px;
+  color: white;
+  background-color:  rgb(80, 249, 196);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.step-three {
+  margin-top: 20px;
+  color: white;
+  background-color:  rgb(80, 249, 196);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  display: inline-block;
 }

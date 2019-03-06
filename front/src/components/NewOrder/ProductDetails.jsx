@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { Form, Button } from 'semantic-ui-react';
-// import { throws } from 'assert';
 
 import "./newOrder.scss";
 
@@ -15,14 +13,20 @@ class ProductDetails extends Component{
         this.props.nextStep();
     }
 
+
+
+
+
     render(){
         const { values } = this.props
+        
+        
         return(
 
     <div>
         <Navbar conditions={'Order'}/>
 
-        <div className="step-one">1</div>
+        <div className="step-one"><p>1</p></div>
 
         <form className="order-form">
 
@@ -63,7 +67,7 @@ class ProductDetails extends Component{
                 onChange={this.props.handleChange('quantity')}
                 defaultValue={values.quantity}/>
 
-            <input id="order-button" type="submit" value="Save And Continue" onClick={this.saveAndContinue}/>
+            <input id="order-button" type="submit" value="Next" onClick={this.saveAndContinue}/>
 
 
             </div>

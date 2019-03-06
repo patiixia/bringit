@@ -55,13 +55,15 @@ class Confirmation extends Component{
                         <li className="order-li"> Quantity: {quantity}</li>
                         <li className="order-li"> Total: {price*quantity}</li>
     
-
                 </ul>
 
                 </div>
 
                 <input id="order-button" type="submit" value="Back" onClick={this.back} />
-                <input id="order-button" type="submit" value="Confirm" onClick={this.saveAndContinue} />
+                <form onSubmit={this.props.confirmation}>
+                <input id="order-button" type="submit" value="Confirm"/>
+                {/* <input id="order-button" type="submit" value="Confirm" onClick={this.saveAndContinue} /> */}
+                </form>
                 </div>
                 </div>
             </div>

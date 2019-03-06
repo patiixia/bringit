@@ -25,6 +25,9 @@ class DeliveryCityDate extends Component{
     <div>
             <Navbar conditions={'Order'}/>
 
+        <div className="step-two"><p>2</p></div>
+
+
         <form className="order-form">
 
             <div className="form-content">
@@ -34,14 +37,14 @@ class DeliveryCityDate extends Component{
 
             <h2 id="order-header">Delivery City and Date</h2>
                 
-                <input className="order1-input" type="text" name="deliveryFrom" placeholder='Travel From'
+                <input className="order1-input" type="text" name="deliveryFrom" placeholder='Delivery From'
                 onChange={this.props.handleChange('deliveryFrom')}
-                defaultValue={values.travelFrom}/>
+                defaultValue={values.deliveryFrom}/>
             
                 
-                <input className="order1-input" type="text" name="deliveryTo" placeholder='Travel To'
+                <input className="order1-input" type="text" name="deliveryTo" placeholder='Delivery To'
                 onChange={this.props.handleChange('deliveryTo')}
-                defaultValue={values.travelTo}
+                defaultValue={values.deliveryTo}
                 />
          
                 
@@ -50,10 +53,10 @@ class DeliveryCityDate extends Component{
                 defaultValue={values.deliveryDate}
                 />
     
-
-                <input id="order-button" type="submit" value="Back" onClick={this.back}/>
-                <input id="order-button" type="submit" value="Save And Continue" onClick={this.saveAndContinue}/>
-
+                <div className="delivery-buttons">
+                <input id="order-button-delivery" type="submit" value="Back" onClick={this.back}/>
+                <input id="order-button-delivery" type="submit" value="Next" onClick={this.saveAndContinue}/>
+                </div>
                 </div>
         </form>
 

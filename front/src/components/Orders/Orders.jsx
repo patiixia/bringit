@@ -47,12 +47,17 @@ export default class Orders extends Component {
           {this.state.orders.map(order => {
             return(
               <div className="allMyOrders">
+              <img className="product-image" src={order.productImage} alt=""/>  
+                         
+              <div className="product-text">
               <h2>{order.productName}</h2>
-              <h2>{order.price}</h2>
-              <p id="delivery-date">{order.deliveryDate}</p>
-              <input id="orderDelete-button" type="submit" value="Cancel Order" />
+              <h3><span>Delivery From </span>{order.deliveryFrom}</h3>
+              <h3><span>Delivery To </span>{order.deliveryTo}</h3>
+              <p id="delivery-date">Delivery Date: {order.deliveryDate}</p>
               </div>
+              <input id="orderDelete-button" type="submit" value="Cancel Order" />
 
+              </div>          
 
             )
           } )

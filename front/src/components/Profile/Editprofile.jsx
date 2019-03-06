@@ -16,25 +16,10 @@ export default class Editprofile extends Component {
     this.service = new PhotoService();
 }
 
-componentDidMount() {
-  // console.log("dentro")
-  // if (this.props.imageUrl !== undefined) {
-  //     this.setState({ ...this.state, imageUrl: this.props.imageUrl });
-  // }
-}
-
-// componentWillReceiveProps(nextProps) {
-//   console.log("dentro 2")
-// this.setState({ ...this.state, imageUrl: nextProps["imageUrl"] });
-// }
-
 handleFileUpload = e => {
-  // console.log("dentro 3")
-// console.log("The file to be uploaded is: ", e.target.files[0]);
 
 const uploadData = new FormData();
 uploadData.append("imageUrl", e.target.files[0]);
-console.log("llamada desde el componente")
 this.service
   .handleUpload(uploadData)
   .then(response => {

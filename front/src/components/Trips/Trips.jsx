@@ -35,7 +35,7 @@ export default class Trips extends Component {
         <Navbar conditions={'trips'}/>
 
         <div className="myTrips-header">
-        <h2>Deliveries</h2>
+        <h2>Trips</h2>
         <Link id="myTrips-button" to={"/trips/new"}> New Trip</Link>
         
         </div>
@@ -48,10 +48,15 @@ export default class Trips extends Component {
           {this.state.travels.map(travel => {
             return(
               <div className="allMyTrips">
+              <p id="travel-id">{travel._id}</p>
               <h2>{travel.travelFrom}</h2>
               <h2>{travel.travelTo}</h2>
               <p id="travel-date">{travel.travelDate}</p>
-              <input id="tripDelete-button" type="submit" value="Cancel Trip" />
+              
+              <input id="relatedOrders-button" type="submit" value="Related orders" onClick="tripsOrdersRelated()"/>
+              <input id="tripDelete-button" type="submit" value="Cancel Trip"/>
+
+
               </div>
 
 

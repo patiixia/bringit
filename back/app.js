@@ -94,6 +94,7 @@ app.use('/', index);
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
+// creción de viajes
 const travelRoutes = require('./routes/travel');
 app.use('/api/travel', travelRoutes);
 
@@ -101,6 +102,11 @@ app.use('/api/travel', travelRoutes);
 const orderRoutes = require('./routes/order');
 app.use('/api/order', orderRoutes);
 //
+
+// visualización de viaje con orders relacionadas con destino
+
+// const travelOrdersRoutes = require('./routes/travelorders');
+// app.use('/api/travelorders', travelOrdersRoutes);
 
 app.use('/api', require('./routes/file-upload-routes'));
 

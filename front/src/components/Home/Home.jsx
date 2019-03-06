@@ -12,6 +12,8 @@ export default class Home extends Component {
       <div>
          <Navbar conditions={'home'}/>
 
+
+      {/* Landing */}
         <div className="grid-flex">
           <div id="image" className="col col-image">
         </div>
@@ -24,6 +26,8 @@ export default class Home extends Component {
         </div>
       </div>
 
+
+       {/* How does it works */}
       <div className="howdoesitwork">
 
       <div className="home-col">
@@ -42,6 +46,29 @@ export default class Home extends Component {
         </div> 
 
       </div>
+
+      {/* How does it work? Travel and order  */}
+      <div className="grid-flex-howdoes">
+         
+      <div className="col-howdoes col-text-howdoes">
+          <div className="Aligner-item">
+            <h2>Are you traveler?</h2>
+            <p>Are you looking for a product that is not available in your country?</p>
+                  
+            </div>
+        </div>
+
+<hr id="vertical-hr"/>
+
+        <div className="col-howdoes col-text-howdoes">
+          <div className="Aligner-item-howdoes">
+            <h2>Are you orderer?</h2>
+            <p>Are you looking for a product that is not available in your country?</p>
+          </div>
+        </div>
+      </div>
+
+
 
         <Footer />
       </div>

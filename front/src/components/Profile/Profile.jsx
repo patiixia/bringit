@@ -6,7 +6,6 @@ import "./profile.scss";
 
 //Rutas a paginas
 import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
 import Editprofile from './Editprofile';
 
 export default class Profile extends Component {
@@ -33,17 +32,12 @@ export default class Profile extends Component {
     return (
       <div>
         <Navbar conditions={'profile'}/>
-        <Editprofile conditions={'editprofile'}/>
         <div className="profile-style">
-        <h1>Hi there,</h1>
-        <img src="" alt=""/>
+        <h2>Hi there,</h2>
         <input id="edit-profile-button" type="submit" value="Edit profile" />
-
-
-        {/* <h1>Hi there, {this.state.loggedInUser.name}</h1> */}
+        {/* <h1>Hi there, {this.state.user.name}</h1> */}
         </div>
-        <Footer />
-
+        <Editprofile conditions={'editprofile'}/>
       </div>
     )
   }
