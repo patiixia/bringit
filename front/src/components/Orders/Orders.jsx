@@ -22,7 +22,7 @@ export default class Orders extends Component {
       this.setState({...this.state,
         orders: order
       })
-      this.props.getUser(order)
+      this.props.getOrders(order) //getUser
     }).catch(err => {
       console.log(err)
       } )

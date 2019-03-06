@@ -12,6 +12,7 @@ import NewDelivery from './components/NewDelivery/NewDelivery';
 import Orders from './components/Orders/Orders';
 import MainOrderForm from './components/NewOrder/MainOrderForm'
 import Editprofile from './components/Profile/Editprofile';
+import TripOrders from './components/TripOrders/TripOrders';
 
 
 class App extends Component {
@@ -42,6 +43,7 @@ class App extends Component {
         <Route exact path='/trips/new' render={() => <NewDelivery/> }/>
         <Route exact path='/orders' render={() => <Orders/> }/>
         <Route exact path='/orders/new' render={() => <MainOrderForm/> }/>
+        <Route exact path='/triporders' render={({location}) => <TripOrders location={location}/> }/>
 
 
 

@@ -105,8 +105,9 @@ app.use('/api/order', orderRoutes);
 
 // visualización de viaje con orders relacionadas con destino
 
-// const travelOrdersRoutes = require('./routes/travelorders');
-// app.use('/api/travelorders', travelOrdersRoutes);
+const travelOrdersRoutes = require('./routes/travel-orders');
+app.use('/api/travelorders', travelOrdersRoutes);
+
 
 app.use('/api', require('./routes/file-upload-routes'));
 

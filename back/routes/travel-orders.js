@@ -5,25 +5,22 @@ const Order = require("../models/Order");
 const Travel = require("../models/Travel");
 
 
-
 router.post('/', (req, res, next) => {
-//id viaje
 
-function tripsOrdersRelated() {
-  document.querySelector(".myTrips")
-}
+Travel.find({_id: req.body.id})
+.then (travelinfo => {
+ 
+  Order.find({deliveryTo: travelinfo[0].travelTo})
+  .then (orderinfo => {
+    res.json({"infoTravel": travelinfo, "infoOrders": orderinfo })
+  })
 
+})
 
-    Travel.find({userId: req.user._id} || {travelId: req.travel._id} ) 
-    .then (travelinfo => {
-        Order.find({deliveryTo: travelinfo.travelTo})
-        .then(orderInfo=>  {
-            res.json({"infoTravel":travelinfo, "infoOrders": orderInfo })
-        })  
-    })
-    .catch(err => {
+.catch(err => {
       res.status("403").json({"Mensaje":"La petición no ha podido ser realizada"})
-    })
+  
+})  
   
   })
 

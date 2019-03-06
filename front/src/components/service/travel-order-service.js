@@ -1,5 +1,4 @@
 import axios from 'axios';
-console.log(process.env)
 class TravelOrderService {
   constructor() {
     let service = axios.create({
@@ -19,6 +18,11 @@ class TravelOrderService {
     .then(response => response.data)
   }
 
+  getAllOrdersfromTravels = (id)  => {
+    //console.log(id)
+    return this.service.post('/travelorders', {"id":id})
+    .then(response => response.data)
+  }
   
 }
 

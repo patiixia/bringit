@@ -75,7 +75,7 @@ export default class NewDelivery extends Component {
     )
   } else {
       
-    return <Redirect to="/travels" />
+    return <Redirect to="/trips" />
   }
 }
 }

@@ -1,5 +1,4 @@
 import axios from 'axios';
-console.log(process.env)
 class TravelService {
   constructor() {
     let service = axios.create({
