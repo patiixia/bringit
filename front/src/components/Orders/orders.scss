@@ -4,11 +4,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background-color: rgba(247, 247, 247, 0.714);
+    //background-color: rgba(247, 247, 247, 0.714);
 }
 
 .myOrders-header {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 #myOrders-button {
@@ -59,7 +59,9 @@
       margin-bottom: 20px;
       margin-left: 10px;
       border-radius: 5px;
-      background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(https://image.freepik.com/vector-gratis/fondo-viaje-garabatos_23-2148044878.jpg);
+      background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(https://image.freepik.com/vector-gratis/fondo-viajes-mundo_1010-471.jpg);
+      //https://image.freepik.com/vector-gratis/fondo-viaje-garabatos_23-2148044878.jpg
+      // https://image.freepik.com/vector-gratis/plantilla-logotipo-avion_23-2147498225.jpg
       text-align: initial;
       padding-left: 16px;
       display: flex;

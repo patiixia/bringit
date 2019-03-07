@@ -54,7 +54,7 @@ export default class NewDelivery extends Component {
 
           <h2>Add new trip</h2>
 
-          <p id="addnewtrip-text">With a trip added, you can make multipe offers and make more money.</p>
+          <p id="addnewtrip-text">Add your trip and make multiple offers to make more money.</p>
 
           <div className="form-content">
 
@@ -63,6 +63,8 @@ export default class NewDelivery extends Component {
             <input className="order-input" type="text" name="travelTo" placeholder="Traveling to" value={this.state.travelTo} onChange={ e => this.handleChange(e)}/>
 
             <input className="order-input" type="date" name="travelDate" placeholder="Travel Date" value={this.state.travelDate} onChange={ e => this.handleChange(e)}/>
+
+{/* configurar el botón input para que redireccione a los viajes con productos relacionados */}
 
             <input id="order-button" type="submit" value="Add" />
 

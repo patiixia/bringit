@@ -101,14 +101,15 @@ a:hover {
     height: 200px;
     //float: right;    
     text-align: left;
-
+    display: none;
     position: absolute;
+    //margin-top: 25.5px;
     right: 0;
   }
 
-  #profilephoto:hover .profile-menu-container {
-    display: block;
-  }
+  // #profilephoto:hover + .profile-menu-container {
+  //   display: block;
+  // }
 
   .p-menu {
     margin-top: 12px;

@@ -1,0 +1,93 @@
+// Structure
+.confirmation-order-form {
+    margin-top: 10px;
+    height:35em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.confirmation-form-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+// Confirmation Header
+#confirmation-order-header {
+    color: rgb(53, 53, 53);
+}
+
+// Confirmation Paragraph
+#confirmation-p{
+    font-size: 16px;
+    margin-top: -10px;
+    color: #353535;
+  
+}
+
+// Details confirmation Content
+.details-confirmation {
+    background-color:  #e8eeef;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.details-confirmation-total {
+    background-color:  #e8eeef;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 10px;
+    text-align: end;
+
+}
+
+.details-confirmation-total li {
+    margin-right: 20px;
+    font-weight: bold;
+
+}
+
+// Confirmation li
+.confirmation-li {
+    list-style:none;
+    margin-bottom: 10px;
+    color: #353535;
+}
+
+.confirmation-button {
+    font-weight: 600;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    background-color:  rgb(80, 249, 196);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8em;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    //margin-top: 1em;
+    //margin-bottom: 1em;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  }
+
+.hr-confirmation {
+  border-top: 1.5px solid white;
+  margin-right: 30px;
+  
+}
+
+
+// Flation Confirmation Image
+#confirmation-img {
+  margin-top: 90px;
+  height: 50px;
+  width: 50px;
+  margin-left: 210px;
+
+
+}

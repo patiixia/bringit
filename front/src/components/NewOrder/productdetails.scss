@@ -1,0 +1,103 @@
+// Structure
+.order-form-product-details {
+    margin-top: 60px;
+    height:35em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-content-product-details {
+    margin-top: -120px; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+// Product Details Header
+#product-details-header {
+    color: rgb(53, 53, 53);
+}
+
+// Product Details Input Field 
+.product-details-input {
+    color: rgb(53, 53, 53);
+    background-color:#e8eeef;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7em;
+    margin-bottom: 1.8em;
+    width: 265px;
+    font-size:13px;
+  }
+
+// Product Details Button  
+#product-details-button {
+    font-weight: 600;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    background-color:  rgb(80, 249, 196);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8em;
+    //margin-top: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  }
+
+// Right column content
+.form-content-right-product-details {
+    background-color: #e8eeef;
+    margin-top: -3px;
+    margin-left: 50px;
+    width: 250px;
+    height: 120px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+// Total price
+#product-details-totalprice {
+    text-align: right;
+    margin: 8px;
+    color: rgb(53, 53, 53);
+}
+
+
+// hr product 
+.hr-product {
+  border-top: 1.5px solid white;
+  color:#f3f6db;
+  margin-left: 10px; 
+  margin-right: 10px;
+}
+
+
+// Package Flaticon
+
+#package {
+  height: 50px;
+  width: 50px;
+  margin-left: 115px;
+
+}
+
+// Step
+
+.step-one p {
+  margin-top: 20px;
+  color: white;
+  background-color:  rgb(80, 249, 196);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  display: inline-block;
+}
+

@@ -58,7 +58,7 @@ export default class Trips extends Component {
               
               {/* <input id="relatedOrders-button" type="submit" value="Related orders" onClick={e => this.tripsOrdersRelated(travel._id)}/> */}
               
-              <Link to={{ pathname: '/triporders', state: { id: travel._id} }}><input id="tripDelete-button" type="submit" value="Prueba"/></Link>
+              <Link to={{ pathname: '/triporders', state: { id: travel._id} }}><input id="relatedOrders-button" type="submit" value="Related Orders"/></Link>
               
               <input id="tripDelete-button" type="submit" value="Cancel Trip"/>
 

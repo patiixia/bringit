@@ -1,61 +1,80 @@
-import React, { Component } from 'react';
-import TravelOrderService from '../service/travel-order-service';
+import React, { Component } from "react";
+import TravelOrderService from "../service/travel-order-service";
 
-import Navbar from '../Navbar/Navbar';
+import Navbar from "../Navbar/Navbar";
 
 import "./tripsorders.scss";
 
 export default class TripOrders extends Component {
-
-
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = { travels: [], orders: []};
+    this.state = { travels: [], orders: [] };
     this.travelOrderService = new TravelOrderService();
+    this.tripsOrdersRelated();
   }
 
-  tripsOrdersRelated = () =>  {
+  tripsOrdersRelated = () => {
     //console.log(id)
-   this.travelOrderService.getAllOrdersfromTravels(this.props.location.state.id)
-   .then(tripsOrders => {
-     console.log(tripsOrders)
-
-    this.setState({...this.state,
-       tripsOrders: tripsOrders
-     })
-     //console.log(tripsOrders)
-     //this.props.getAllOrdersfromTravels(tripsOrders)
-  }).catch(err => {
-    console.log(err)
-    } )
-}
-
-
-
+    this.travelOrderService
+      .getAllOrdersfromTravels(this.props.location.state.id)
+      .then(tripsOrders => {
+        console.log(tripsOrders)
+        this.setState({ ...this.state, tripsOrders: tripsOrders });
+       
+      })
+      
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   render() {
-    //this.tripsOrdersRelated();
     // console.log(this.props);
+    
     // this.props.location?console.log(this.props):console.log("hola")
     return (
-      
       <div>
+        <Navbar conditions={"trips"} />
+        <div>
+          {this.state.tripsOrders ? (
 
-          <Navbar conditions={'trips'}/>
-          <div>
+            <div>
+              <div className="trip-header">
+              <p className="p-trip-header">{this.state.tripsOrders.infoTravel[0].travelFrom}-{this.state.tripsOrders.infoTravel[0].travelTo}</p>
+              <p className="date-trip-header">{this.state.tripsOrders.infoTravel[0].travelDate}</p>
+              </div>
+              <div>
 
-          {/* <h2>{this.tripsOrders.travelFrom}</h2>
-          <h2>{this.tripsOrders.travelTo}</h2>
-                */}
+              <div className="myOrders">
 
-          </div>
+                {this.state.tripsOrders.infoOrders.map(allorders => {
+                  return (
 
-          <div>
+                  <div className="travel-all-orders-container">
+                        <img className="product-image" src={allorders.productImage} alt=""/>  
           
+                        <div className="travel-all-orders-product-text">
+                        <h2>{allorders.userId[0].name}</h2>
+                        <h3><span>Delivery From </span>{allorders.deliveryFrom}</h3>
+                        <h3><span>Delivery To </span>{allorders.deliveryTo}</h3>
+                        <p id="delivery-date">Delivery Date: {allorders.deliveryDate}</p>
+                        <p id="delivery-date">Price: {allorders.price}$</p>
+                        </div>
 
-          </div>
-        
-      </div>
-    )
+                        <form method="post" action="mailto:patricia@patricia.com" >
+                        <input id="orderDelete-button" type="submit" value="Make offer" />
+                        </form>
+
+                  </div>          
+                  );
+                })}
+              </div>
+              </div>
+            </div>
+          ) : ( <div>Hola</div>
+          )}
+        </div>
+        </div>
+    );
   }
 }

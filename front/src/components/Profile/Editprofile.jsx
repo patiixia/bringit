@@ -4,17 +4,29 @@ import PhotoService from '../service/photo-service';
 
 import "./editProfile.scss";
 
-
-
 export default class Editprofile extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      imageUrl: "https://image.flaticon.com/icons/svg/150/150808.svg",
+      imageUrl: "",
     };
     this.service = new PhotoService();
 }
+
+// upload photo?
+
+componentDidMount() {
+  if (this.props.imageUrl !== undefined) {
+    this.setState({...this.state, imageUrl: this.props.imageUrl})
+  }
+  }
+
+
+componentWillReceiveProps(nextProps) {
+  this.setState({...this.state, imageUrl: nextProps["imageUrl"]})
+  }
+
 
 handleFileUpload = e => {
 
@@ -23,13 +35,13 @@ uploadData.append("imageUrl", e.target.files[0]);
 this.service
   .handleUpload(uploadData)
   .then(response => {
-   console.log(response)
+   console.log(1)
     this.setState({ imageUrl: response.imageUrl });
-    this.service
-      .updatePhotoProfile({ imageUrl: response.imageUrl })
-      .then(response => {
-       
-      });
+    // this.service
+    //   .updatePhotoProfile({ imageUrl: response.imageUrl })
+    //   .then(response => {
+    //     console.log(2)
+    //   });
   })
   .catch(err => {
     console.log("Error while uploading the file: ", err);
@@ -37,6 +49,7 @@ this.service
 };
 
 render() {
+  console.log(this.state.imageUrl)
 return (
   <div>
     <div className="photo">
