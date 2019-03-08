@@ -55,7 +55,7 @@ export default class Orders extends Component {
               <h3><span>Delivery To </span>{order.deliveryTo}</h3>
               <p id="delivery-date">Delivery Date: {order.deliveryDate}</p>
               </div>
-              <input id="orderDelete-button" type="submit" value="Cancel Order" />
+              <input id="orderDelete-button-orders" type="submit" value="Cancel Order" />
 
               </div>          
 

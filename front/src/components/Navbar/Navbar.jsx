@@ -39,8 +39,8 @@ class Navbar extends Component {
           <div className="container-right">
               <li className={this.props.conditions === "home" || this.props.conditions === "signup" ? "mostrar" : "ocultar"}><Link to="/login">Log in</Link></li>
               <li className={this.props.conditions === "home" || this.props.conditions === "login"  ? "mostrar" : "ocultar"}><Link to="/signup">Sign up</Link></li>
-              <Link to="/messages"><img id="messages" className={this.props.conditions === "home" ? "ocultar" : "mostrar"} src="https://image.flaticon.com/icons/svg/131/131155.svg" alt="messages"/></Link>
-              <div onClick={() => this.toggle()}><img id="profilephoto" className={this.props.conditions === "home" ? "ocultar" : "mostrar"} src="https://image.flaticon.com/icons/svg/149/149995.svg" alt="profile"/></div>
+              {/* <Link to="/messages"><img id="messages" className={this.props.conditions === "home" ? "ocultar" : "mostrar"} src="https://image.flaticon.com/icons/svg/131/131155.svg" alt="messages"/></Link> */}
+              <div onClick={() => this.toggle()}><img id="profilephoto" className={this.props.conditions === "home" || this.props.conditions === "signup" || this.props.conditions === "login" ? "ocultar" : "mostrar"} src="https://image.flaticon.com/icons/svg/149/149995.svg" alt="profile"/></div>
             {/* <li className={this.props.conditions==="trips" ? "mostrar": "ocultar" }><Link to='/'>Log out</Link></li> */}
           </div>
         </nav>
